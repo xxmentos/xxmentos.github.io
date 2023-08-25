@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Привет, я - mentos</title>
+ <title>Кнопка</title>
  <style>
   body {
    background-color: black;
-   color: white;
-   font-size: 36px;
-   text-align: center;
-   margin: 0;
-   padding: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+  }
+  button {
+   background-color: white;
+   color: black;
+   padding: 10px 20px;
+   font-size: 24px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
   }
  </style>
 </head>
 <body>
- Привет, я - mentos
+ <button id="myButton" onclick="changeText()">Нажми</button>
+ <script>
+  function changeText() {
+   document.getElementById("myButton").innerHTML = "Привет, я - mentos.";
+  }
+ </script>
 </body>
 </html>
