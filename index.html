@@ -1,36 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+ <meta charset="UTF-8">
  <title>Mentos</title>
- <style type="text/css">
-  body {
-   background-color: black;
-   text-align: center;
-  }
-  button {
-   background-color: white;
-   color: black;
-   padding: 15px 30px;
-   font-size: 24px;
-   border: none;
-   cursor: pointer;
-  }
-  h1 {
-   color: white;
-   font-size: 48px;
-   margin-top: 100px;
-  }
- </style>
+ <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <button onclick="showMessage()">Нажми!</button>
- <script type="text/javascript">
-  function showMessage() {
-   document.body.style.backgroundColor = "white";
-   document.querySelector("button").style.display = "none";
-   document.querySelector("h1").innerHTML = "Привет, я - mentos.";
-  }
- </script>
- <h1></h1>
+ <button id="btn">Нажми!</button>
+ <script src="script.js"></script>
 </body>
 </html>
