@@ -1,12 +1,1 @@
-@font-face {
-// Montserrat-Bold
-font-family: "Montserrat-Bold"; 
-// адрес шрифта и тип 
-src: url("Montserrat-Bold.ttf") format("truetype"); 
-font-style: normal; 
-font-weight: normal; 
-} 
 
-h1{
-font-family: "Montserrat-Bold";
-}
