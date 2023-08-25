@@ -1,8 +1,12 @@
 @font-face {
 // Montserrat-Bold
-font-family: "RalewayRegular"; 
+font-family: "Montserrat-Bold"; 
 // адрес шрифта и тип 
-src: url("../fonts/RalewayRegular.ttf") format("truetype"); 
+src: url("Montserrat-Bold.ttf") format("truetype"); 
 font-style: normal; 
 font-weight: normal; 
 } 
+
+h1{
+font-family: "Montserrat-Bold";
+}
