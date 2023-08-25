@@ -3,7 +3,7 @@ const title = document.querySelector('h1');
 
 button.addEventListener('click', () => {
  button.style.display = 'none';
- document.body.style.backgroundColor = 'white';
+ document.body.style.backgroundColor = 'black';
  title.style.display = 'block';
 });
 
