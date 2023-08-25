@@ -15,3 +15,12 @@ button {
  border-radius: 5px;
  cursor: pointer;
 }
+.hidden {
+    display: none;
+}
+.show {
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: 48px;
+}
