@@ -2,3 +2,19 @@ html, body {
     overflow: hidden;
     height: 100vh;
 }
+
+h1 {
+    color: white;
+    font-family: Montserrat, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: textReveal 5s steps(40, end) 1s infinite;
+}
+
+@keyframes textReveal {
+    from { width: 0; }
+    to { width: 100%; }
+}
