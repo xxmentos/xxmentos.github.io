@@ -1,47 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Кнопка</title>
- <style>
+ <title>Mentos</title>
+ <style type="text/css">
   body {
    background-color: black;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 100vh;
+   text-align: center;
   }
   button {
    background-color: white;
    color: black;
-   padding: 10px 20px;
+   padding: 15px 30px;
    font-size: 24px;
    border: none;
-   border-radius: 5px;
    cursor: pointer;
   }
-        .hidden {
-            display: none;
-        }
-        .show {
-            display: block;
-            text-align: center;
-            color: black;
-            font-size: 48px;
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-        }
+  h1 {
+   color: white;
+   font-size: 48px;
+   margin-top: 100px;
+  }
  </style>
 </head>
 <body>
- <button id="myButton" onclick="changeText()">Нажми</button>
-    <div id="myText" class="hidden show">Привет, я - mentos.</div>
- <script>
-  function changeText() {
-   document.getElementById("myButton").classList.add("hidden");
-            document.getElementById("myText").classList.remove("hidden");
-            document.body.style.backgroundColor = "white";
+ <button onclick="showMessage()">Нажми!</button>
+ <script type="text/javascript">
+  function showMessage() {
+   document.body.style.backgroundColor = "white";
+   document.querySelector("button").style.display = "none";
+   document.querySelector("h1").innerHTML = "Привет, я - mentos.";
   }
  </script>
+ <h1></h1>
 </body>
 </html>
