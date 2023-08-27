@@ -8,13 +8,13 @@ body {
   height: 100px;
   border-radius: 50%;
   position: absolute;
-  transition: transform 2s ease-in-out;
+  transition: transform 5s ease-in-out;
 }
 
 #circle1 {
-  background-color: #FF5733;
+  background-color: #FF5733; /* Задайте начальный цвет (можно удалить, если не нужен) */
 }
 
 #circle2 {
-  background-color: #337DFF;
+  background-color: #337DFF; /* Задайте начальный цвет (можно удалить, если не нужен) */
 }
