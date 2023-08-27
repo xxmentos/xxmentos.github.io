@@ -4,8 +4,8 @@ body {
 }
 
 .circle {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   position: absolute;
   transition: transform 5s ease-in-out;
