@@ -11,6 +11,7 @@ h1 {
     text-align: center;
     overflow: hidden;
     white-space: nowrap;
+    user-select: none;
     animation: textReveal 5s steps(40, end) 1s infinite;
 }
 
