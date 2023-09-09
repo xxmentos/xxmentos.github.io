@@ -19,6 +19,13 @@ h1 {
     animation: textReveal 5s steps(40, end) 1s infinite;
 }
 
+button {
+  font-size: 20px;
+  color: black;
+  background-color: white;
+  font-family: Montserrat, sans-serif;
+}
+
 @keyframes textReveal {
     from { width: 0; }
     to { width: 100%; }
