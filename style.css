@@ -1,32 +1,20 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+html, body {
     overflow: hidden;
-}
-
-.content {
-    text-align: center;
+    height: 100vh;
 }
 
 h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 72px;
+    color: white;
+    font-family: Montserrat, sans-serif;
+    font-size: 50px;
     font-weight: bold;
-    color: transparent;
-    text-transform: uppercase;
-    animation: fade-in 2s ease-in-out forwards;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: textReveal 5s steps(40, end) 1s infinite;
 }
 
-@keyframes fade-in {
-    0% {
-        color: transparent;
-    }
-    100% {
-        color: white;
-    }
+@keyframes textReveal {
+    from { width: 0; }
+    to { width: 100%; }
 }

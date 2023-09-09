@@ -1,15 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Мой Сайт</title>
+    <title>xxmentos :p</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: white;
+            font-family: Montserrat, sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 5s forwards;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="content">
-        <h1 id="text">xxmentos</h1>
-    </div>
-    <script src="script.js"></script>
+    <h1>Привет, это mentos.</h1>
 </body>
 </html>
