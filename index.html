@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>xxmentos</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>xxmentos :p</title>
     <meta name="viewport" content="width=device-width, user-scalable=no">
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: white;
+            font-family: Montserrat, sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 5s forwards;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
     <h1>Привет, это mentos.</h1>
-    <button>Telegram</button>
 </body>
 </html>

@@ -1,38 +1,20 @@
-body {
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+html, body {
+    overflow: hidden;
     height: 100vh;
-    margin: 0;
 }
 
 h1 {
     color: white;
     font-family: Montserrat, sans-serif;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
-    opacity: 0;
-    animation: fadeIn 5s forwards;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: textReveal 5s steps(40, end) 1s infinite;
 }
 
-button {
-    background-color: white;
-    color: black;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+@keyframes textReveal {
+    from { width: 0; }
+    to { width: 100%; }
 }
