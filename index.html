@@ -1,44 +1,66 @@
-<html lang="en"><head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>ну типа вот</title>
-        <link rel="stylesheet" href="https://fortunemagnet.fun/styles.css">
-        <script>
-          setInterval(() => {
-            location.reload();
-          }, 5000); // Обновление каждые 5 секунд
-        </script>
-      </head>
-      <body>
-        <div id="app" class="app">
-        <header class="header">
-          <nav class="nav">
-            <div class="coupon-header">
-			<center>
-            Карта
-			</center>
-          </div>
-        </nav>
-      </header>
-      <center>
-      <div class="cart__title">это дохуя крутая ашка <br>покупайте бонусы у нас пж</div>
-      </center>
-      <div class="settings"></div>
-	  <center>
-      <div class="cart">
-        <div class="cart__top d-flex flex-column align-items-center">
-          <div class="cart__discount">Бонус 500%</div>
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&amp;data=E7005000826210213T128004" alt="QR Code">
-          <br>
-          <div class="cart__block-separator"></div>
-        </div>
-        <div class="cart__title">7005 0008 2621 0213</div>
-        <div class="cart__title">Баланс: 20000.02 бонусных рублей<br>Регион: Австралия</div>
-		</div></center>
-        </div>
-        
-        
+<!DOCTYPE html>
+<html lang="en">
 
-        
-</body></html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ну типа вот</title>
+    <link rel="stylesheet" href="https://fortunemagnet.fun/styles.css">
+    <script>
+        function changeCardNumber() {
+            // Генерируем случайные 4 цифры для изменения
+            var newDigits = Math.floor(1000 + Math.random() * 9000);
+            // Заменяем последние 4 цифры в номере карты
+            var cardNumberElement = document.getElementById("cardNumber");
+            cardNumberElement.innerText = "7005 0008 2621 02" + newDigits;
+
+            // Обновляем QR-код
+            var qrCodeImage = document.getElementById("qrCode");
+            qrCodeImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=E70050008262102" + newDigits;
+        }
+
+        setInterval(() => {
+            location.reload();
+        }, 5000); // Обновление каждые 5 секунд
+    </script>
+</head>
+
+<body>
+    <div id="app" class="app">
+        <header class="header">
+            <nav class="nav">
+                <div class="coupon-header">
+                    <center>
+                        Карта
+                    </center>
+                </div>
+            </nav>
+        </header>
+        <center>
+            <div class="cart__title">это дохуя крутая ашка <br>покупайте бонусы у нас пж</div>
+        </center>
+        <div class="settings">
+            <center>
+                <!-- Добавленная кнопка -->
+                <button onclick="changeCardNumber()">Изменить номер карты</button>
+            </center>
+        </div>
+        <center>
+            <div class="cart">
+                <div class="cart__top d-flex flex-column align-items-center">
+                    <div class="cart__discount">Бонус 500%</div>
+                    <!-- Идентификатор добавлен для изменения содержимого -->
+                    <img id="qrCode" src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=E7005000826210213T128004" alt="QR Code">
+                    <br>
+                    <div class="cart__block-separator"></div>
+                </div>
+                <!-- Идентификатор добавлен для изменения содержимого -->
+                <div id="cardNumber" class="cart__title">7005 0008 2621 0213</div>
+                <div class="cart__title">Баланс: 20000.02 бонусных рублей<br>Регион: Австралия</div>
+            </div>
+        </center>
+    </div>
+</body>
+
+</html>
