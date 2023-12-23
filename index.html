@@ -8,9 +8,41 @@
     <title>магнит))</title>
     <link rel="stylesheet" href="https://fortunemagnet.fun/styles.css">
     <script>
+        function generateRandomDigits() {
+            // Генерация случайных 4 цифр
+            return Math.floor(1000 + Math.random() * 9000);
+        }
+
+        function generateLuhnDigit(number) {
+            // Генерация контрольной цифры по алгоритму Луна
+            var numArr = number.toString().split("").map(Number);
+            var sum = 0;
+            for (var i = numArr.length - 1; i >= 0; i--) {
+                var digit = numArr[i];
+                if (i % 2 === 0) {
+                    digit *= 2;
+                    if (digit > 9) {
+                        digit -= 9;
+                    }
+                }
+                sum += digit;
+            }
+            var luhnDigit = (Math.ceil(sum / 10) * 10 - sum) % 10;
+            return luhnDigit;
+        }
+
         function changeCardNumber() {
-            // Генерируем случайные 4 цифры для изменения
-            var newDigits = Math.floor(1000 + Math.random() * 9000);
+            // Переменная для новых 4 цифр
+            var newDigits;
+
+            do {
+                // Генерация случайных 4 цифр
+                newDigits = generateRandomDigits();
+
+                // Проверка контрольной цифры по алгоритму Луна
+                var luhnDigit = generateLuhnDigit(parseInt("700500082621" + newDigits));
+            } while (luhnDigit !== 0);
+
             // Заменяем последние 4 цифры в номере карты
             var cardNumberElement = document.getElementById("cardNumber");
             cardNumberElement.innerText = "7005 0008 2621 " + newDigits;
@@ -48,11 +80,12 @@
                 </div>
                 <!-- Идентификатор добавлен для изменения содержимого -->
                 <div id="cardNumber" class="cart__title">7005 0008 2621 0213</div>
+                <div class="cart__title">Покажите QR-код на кассе для списания и <br>начисления баллов</div>
+                <div class="settings">
+                    <!-- Перемещенная кнопка -->
+                    <button onclick="changeCardNumber()">Изменить номер карты</button>
+                </div>
                 <div class="cart__title">Баланс: 20000.02 бонусных рублей<br>Ижевск</div>
-            </div>
-            <div class="settings">
-                <!-- Перемещенная кнопка -->
-                <button onclick="changeCardNumber()">Изменить номер карты</button>
             </div>
         </center>
     </div>
