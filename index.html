@@ -5,13 +5,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>магнит))</title>
+    <title>магнит!!!!))</title>
     <link rel="stylesheet" href="https://fortunemagnet.fun/styles.css">
     <script>
-        function generateRandomDigits() {
-            // Генерация случайных 4 цифр
-            return Math.floor(1000 + Math.random() * 9000);
-        }
+        var currentDigits = 0;
 
         function generateLuhnDigit(number) {
             // Генерация контрольной цифры по алгоритму Луна
@@ -32,16 +29,21 @@
         }
 
         function changeCardNumber() {
-            // Переменная для новых 4 цифр
-            var newDigits;
+            // Генерация новых 4 цифр
+            var newDigits = currentDigits.toString().padStart(4, '0');
 
-            do {
-                // Генерация случайных 4 цифр
-                newDigits = generateRandomDigits();
+            // Проверка контрольной цифры по алгоритму Луна
+            var luhnDigit = generateLuhnDigit(parseInt("700500082621" + newDigits));
+            if (luhnDigit !== 0) {
+                alert("Ошибка в контрольной цифре. Попробуйте снова.");
+                return;
+            }
 
-                // Проверка контрольной цифры по алгоритму Луна
-                var luhnDigit = generateLuhnDigit(parseInt("700500082621" + newDigits));
-            } while (luhnDigit !== 0);
+            // Обновление текущих цифр
+            currentDigits++;
+            if (currentDigits > 9999) {
+                currentDigits = 0;
+            }
 
             // Заменяем последние 4 цифры в номере карты
             var cardNumberElement = document.getElementById("cardNumber");
@@ -79,7 +81,7 @@
                     <div class="cart__block-separator"></div>
                 </div>
                 <!-- Идентификатор добавлен для изменения содержимого -->
-                <div id="cardNumber" class="cart__title">7005 0008 2621 0213</div>
+                <div id="cardNumber" class="cart__title">7005 0008 2621 0000</div>
                 <div class="cart__title">Покажите QR-код на кассе для списания и <br>начисления баллов</div>
                 <div class="settings">
                     <!-- Перемещенная кнопка -->
