@@ -1,38 +1,44 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>xxmentos :p</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    <style>
-        body {
-            background-color: black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
-        h1 {
-            color: white;
-            font-family: Montserrat, sans-serif;
-            font-size: 30px;
-            font-weight: bold;
-            text-align: center;
-            opacity: 0;
-            animation: fadeIn 5s forwards;
-        }
+<html lang="en"><head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>QRMagnet</title>
+        <link rel="stylesheet" href="https://fortunemagnet.fun/styles.css">
+        <script>
+          setInterval(() => {
+            location.reload();
+          }, 5000); // Обновление каждые 5 секунд
+        </script>
+      </head>
+      <body>
+        <div id="app" class="app">
+        <header class="header">
+          <nav class="nav">
+            <div class="coupon-header">
+			<center>
+            Карта
+			</center>
+          </div>
+        </nav>
+      </header>
+      <center>
+      <div class="cart__title">Покажите QR-код на кассе для списания и <br>начисления баллов</div>
+      </center>
+      <div class="settings"></div>
+	  <center>
+      <div class="cart">
+        <div class="cart__top d-flex flex-column align-items-center">
+          <div class="cart__discount">Бонус 0,5%</div>
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&amp;data=E7005000826210213T128004" alt="QR Code">
+          <br>
+          <div class="cart__block-separator"></div>
+        </div>
+        <div class="cart__title">7005 0008 2621 0213</div>
+        <div class="cart__title">Баланс: 69.02 бонусных рублей<br>Краснодарский край</div>
+		</div></center>
+        </div>
         
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
-</head>
-<body>
-    <h1>Привет, это mentos.</h1>
-</body>
-</html>
+        
+
+        
+</body></html>
