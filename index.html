@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>магнит))</title>
+    <title>123магнит))</title>
     <link rel="stylesheet" href="https://fortunemagnet.fun/styles.css">
     <script>
         var currentDigits = 0;
@@ -35,9 +35,13 @@
             // Проверка контрольной цифры по алгоритму Луна
             var luhnDigit = generateLuhnDigit(parseInt("700500082621" + newDigits));
 
-            // Если контрольная цифра не соответствует, пропускаем генерацию
+            // Если контрольная цифра не соответствует, пропускаем текущую попытку генерации
             if (luhnDigit !== 0) {
-                changeCardNumber(); // Рекурсивно вызываем функцию для следующей попытки
+                currentDigits++;
+                if (currentDigits > 9999) {
+                    currentDigits = 0;
+                }
+                changeCardNumber();
                 return;
             }
 
