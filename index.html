@@ -13,11 +13,11 @@
             var newDigits = Math.floor(1000 + Math.random() * 9000);
             // Заменяем последние 4 цифры в номере карты
             var cardNumberElement = document.getElementById("cardNumber");
-            cardNumberElement.innerText = "7005 0008 2621 02" + newDigits;
+            cardNumberElement.innerText = "7005 0008 2621 " + newDigits;
 
             // Обновляем QR-код
             var qrCodeImage = document.getElementById("qrCode");
-            qrCodeImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=E70050008262102" + newDigits;
+            qrCodeImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=E700500082621" + newDigits;
         }
 
         setInterval(() => {
